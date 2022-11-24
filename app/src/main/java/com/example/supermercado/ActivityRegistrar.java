@@ -88,17 +88,17 @@ public class ActivityRegistrar extends AppCompatActivity {
         String opcion2="[A-Z,Ñ][a-z,ñ]{2,20}[ ][A-Z,Ñ][a-z,ñ]{2,20}";
         String opcion3="[A-Z,Ñ][a-z,ñ]{2,20}[ ][A-Z,Ñ][a-z,ñ]{2,20}[ ][A-Z,Ñ][a-z,ñ]{2,20}";
         String opcion4="[A-Z,Ñ][a-z,ñ]{2,20}[ ][A-Z,Ñ][a-z,ñ]{2,20}[ ][A-Z,Ñ][a-z,ñ]{2,20}[ ][A-Z,Ñ][a-z,ñ]{2,20}";
-        String opcion5="[0-9]{8,10}";
+        String opcion5="[0-9]{8}";
         String opcion6="[0-9,_,.,-]{4,200}";
         switch(numero){
             case 1:{
                 return dato.matches(opcion1+"|"+opcion2+"|"+opcion3+"|"+opcion4);
             }
             case 2:{
-                return dato.matches(opcion5);
+                return dato.matches(opcion1+"|"+opcion2+"|"+opcion3+"|"+opcion4);
             }
             case 3:{
-                return dato.matches(opcion6);
+                return dato.matches(opcion5);
             }
             case 4:{
                 return dato.matches(opcion6);
