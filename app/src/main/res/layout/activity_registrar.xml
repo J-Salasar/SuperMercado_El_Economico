@@ -65,6 +65,7 @@
                     android:id="@+id/imgRUsers"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
+                    android:onClick="permisos_camara"
                     app:srcCompat="@drawable/ic_baseline_add_a_photo_24" />
             </LinearLayout>
 
