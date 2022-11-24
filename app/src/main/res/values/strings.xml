@@ -9,4 +9,6 @@
     <string name="contrase_a" />
     <string name="direccion" />
     <string name="crear_usuario">CREAR USUARIO</string>
+    <string name="apellidod">Apellido</string>
+    <string name="correo_electronicov">Correo Electronico</string>
 </resources>
