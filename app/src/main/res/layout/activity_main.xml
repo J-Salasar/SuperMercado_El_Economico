@@ -12,7 +12,7 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:gravity="center"
-        android:text="Supermercado El Economico"
+        android:text="@string/supermercado_el_economico"
         android:textColor="#FFFFFF"
         android:textSize="30sp"
         android:textStyle="bold|italic"
