@@ -5,9 +5,8 @@ public class validar_usuario {
     public validar_usuario(){
     }
 
-    public String getValidar() {
-        return validar;
-    }
+    public String getValidar() { return validar;}
+
 
     public void setValidar(String validar) {
         this.validar = validar;
