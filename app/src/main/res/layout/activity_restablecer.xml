@@ -31,12 +31,12 @@
             android:layout_width="44dp"
             android:layout_height="46dp"
             android:layout_marginTop="5dp"
-            android:onClick="onClickRegresar"
+            android:background="@drawable/ic_baseline_arrow_back_24"
 
 
             android:gravity="center"
-            tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck"
-            tools:srcCompat="@drawable/ic_baseline_arrow_back_24" />
+            android:onClick="onClickRegresar"
+            tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
 
         <TextView
             android:id="@+id/textView9"
