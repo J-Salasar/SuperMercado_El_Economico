@@ -11,4 +11,5 @@
     <string name="crear_usuario">CREAR USUARIO</string>
     <string name="apellidod">Apellido</string>
     <string name="correo_electronicov">Correo Electronico</string>
+    <string name="registrarses">Registrarse</string>
 </resources>

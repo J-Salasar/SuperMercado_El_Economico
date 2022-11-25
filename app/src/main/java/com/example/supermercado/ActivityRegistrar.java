@@ -154,7 +154,6 @@ public class ActivityRegistrar extends AppCompatActivity {
         }
         else {
             Toast.makeText(this, "Nombre no valido", Toast.LENGTH_SHORT).show();
-            validar_dato = 1;
         }
     }
     public void validar_correo(){
@@ -374,7 +373,7 @@ public class ActivityRegistrar extends AppCompatActivity {
         }
     }
     public boolean onKeyDown(int keyCode, KeyEvent event){
-        if(keyCode==event.KEYCODE_BACK) {
+        if(keyCode== KeyEvent.KEYCODE_BACK) {
             finishAffinity();
         }
         return super.onKeyDown(keyCode,event);
