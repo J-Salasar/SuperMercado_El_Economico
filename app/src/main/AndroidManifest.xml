@@ -42,7 +42,14 @@
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
         <activity
-            android:name=".ActivityDasboardadmin"
+            android:name=".Admin.ActivityDasboardadmin"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".Repartidor.ActivityRepartidor"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
