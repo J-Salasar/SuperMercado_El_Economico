@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/iconomenud"
-    tools:context=".ActivityIniciar">
+    tools:context=".Admin.ActivityAdministrador">
 
 
     <TextView
@@ -15,7 +15,7 @@
         android:text="@string/activo"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.838"
+        app:layout_constraintHorizontal_bias="0.956"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.216" />
@@ -54,12 +54,12 @@
 
     <ScrollView
         android:layout_width="405dp"
-        android:layout_height="526dp"
+        android:layout_height="490dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.921"
+        app:layout_constraintVertical_bias="0.738"
         tools:ignore="MissingConstraints">
 
 
@@ -88,20 +88,19 @@
                     android:layout_height="match_parent"
                     android:gravity="center"
                     android:orientation="vertical"
-                    android:padding="16dp"
-                    tools:onClick="onClickcategorias">
+                    android:padding="16dp">
 
                     <ImageView
                         android:layout_width="100dp"
                         android:layout_height="100dp"
-                        android:background="@drawable/category_icon_183868" />
+                        android:background="@drawable/pedidos" />
 
 
                     <TextView
                         android:layout_width="114dp"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="2dp"
-                        android:text="Categorias"
+                        android:text="Pedidos"
                         android:textAlignment="center"
                         android:textColor="@color/black"
                         android:textSize="18sp"
@@ -134,7 +133,7 @@
                     <ImageView
                         android:layout_width="100dp"
                         android:layout_height="100dp"
-                        android:background="@drawable/iconfinder_contat_us_30location_4211858_115039"
+                        android:background="@drawable/repartidor"
                         tools:ignore="MissingClass" />
 
 
@@ -142,7 +141,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="2dp"
-                        android:text="Ubicacion"
+                        android:text="Registrar Repartidor"
                         android:textAlignment="center"
                         android:textColor="@color/black"
                         android:textSize="18sp"
@@ -167,7 +166,6 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:gravity="center"
-                    android:onClick="onClickVCarrito"
                     android:orientation="vertical"
                     android:padding="16dp"
                     tools:ignore="MissingClass,UseCompoundDrawables">
@@ -175,14 +173,14 @@
                     <ImageView
                         android:layout_width="100dp"
                         android:layout_height="100dp"
-                        android:background="@drawable/shoppingcart1_114878" />
+                        android:background="@drawable/regis_admin" />
 
 
                     <TextView
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_height="53dp"
                         android:layout_marginTop="2dp"
-                        android:text="Ver carrito"
+                        android:text="Registrar Administrador"
                         android:textAlignment="center"
                         android:textColor="@color/black"
                         android:textSize="18sp"
@@ -207,14 +205,13 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:gravity="center"
-                    android:onClick="onClickHistorialP"
                     android:orientation="vertical"
                     android:padding="16dp">
 
                     <ImageView
                         android:layout_width="100dp"
                         android:layout_height="100dp"
-                        android:background="@drawable/_124822_cellphone_mobile_phone_mobile_shopping_mobile_store_shopping_app_113913" />
+                        android:background="@drawable/profile_icon_icons_com_71114" />
 
 
                     <TextView
@@ -226,86 +223,7 @@
                         android:textColor="@color/black"
                         android:textSize="18sp"
                         android:textStyle="bold"
-                        tools:text="Historial de pedidos" />
-
-
-                </LinearLayout>
-
-            </androidx.cardview.widget.CardView>
-
-            <androidx.cardview.widget.CardView
-                android:layout_width="150dp"
-                android:layout_height="200dp"
-                android:layout_rowWeight="1"
-                android:layout_columnWeight="1"
-                android:layout_margin="12dp"
-                app:cardCornerRadius="10dp"
-                app:cardElevation="5dp">
-
-                <LinearLayout
-                    android:id="@+id/btnPerfilCliente"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:gravity="center"
-                    android:onClick="onClickmiPerfil"
-                    android:orientation="vertical"
-                    android:padding="16dp">
-
-                    <ImageView
-                        android:id="@+id/imgMiPerfil"
-                        android:layout_width="100dp"
-                        android:layout_height="100dp"
-                        android:background="@drawable/profile_icon_icons_com_71114" />
-
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="2dp"
-                        android:text="Mi Perfil"
-                        android:textAlignment="center"
-                        android:textColor="@color/black"
-                        android:textSize="18sp"
-                        android:textStyle="bold" />
-
-
-                </LinearLayout>
-
-            </androidx.cardview.widget.CardView>
-
-            <androidx.cardview.widget.CardView
-                android:layout_width="150dp"
-                android:layout_height="200dp"
-                android:layout_rowWeight="1"
-                android:layout_columnWeight="1"
-                android:layout_margin="12dp"
-                app:cardCornerRadius="10dp"
-                app:cardElevation="5dp">
-
-                <LinearLayout
-                    android:id="@+id/btnIntegrantes"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:gravity="center"
-                    android:onClick="onClickIntegrantes"
-                    android:orientation="vertical"
-                    android:padding="16dp">
-
-                    <ImageView
-                        android:layout_width="100dp"
-                        android:layout_height="100dp"
-                        android:background="@drawable/detail_user_icon_215358" />
-
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="2dp"
-                        android:text="Ajustes"
-                        android:textAlignment="center"
-                        android:textColor="@color/black"
-                        android:textSize="18sp"
-                        android:textStyle="bold" />
+                        tools:text="Mi Perfil" />
 
 
                 </LinearLayout>
@@ -317,4 +235,30 @@
 
     </ScrollView>
 
+    <TextView
+        android:id="@+id/textView13"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=" DASHBOARD ADMINISTRADOR"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.105"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.217" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/radiusbutton"
+        android:text="EXIT"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.582"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.994" />
 </androidx.constraintlayout.widget.ConstraintLayout>

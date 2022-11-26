@@ -24,4 +24,15 @@
     <string name="correo" />
     <string name="t_codigo" />
     <string name="recuperaci_n_de_usuario">Recuperación de usuario</string>
+    <string name="activo">Activo</string>
+    <string name="bienvenido">Bienvenido</string>
+    <string name="ver_carrito" />
+    <string name="historial_de_ordenes" />
+    <string name="acerca_de" />
+    <string name="mi_perfil" />
+    <string name="nombrePerfil">Nombre</string>
+    <string name="telefonoPerfil">Telefono</string>
+    <string name="mi_perfil_admin">Mi Perfil</string>
+    <string name="historial_de_pedidos">Historial de pedidos</string>
+    <string name="ver_carritos">Ver carrito</string>
 </resources>

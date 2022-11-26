@@ -3,7 +3,9 @@ package com.example.supermercado;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.TextView;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
@@ -25,5 +27,39 @@ public BottomNavigationView bottomNavigationView;
 
         //bottomNavigationView=(BottomNavigationView) findViewById(R.id.boton_de_navegacion);
         //getSupportFragmentManager().beginTransaction().replace(R.id.containerMain.);
+
+
+
     }
+
+    public void onClickmiPerfil(View view)
+    {
+        startActivity(new Intent(ActivityIniciar.this,ActivityPerfilUsuario.class));
+        finish();
+    }
+
+    public void onClickIntegrantes(View view)
+    {
+        startActivity(new Intent(ActivityIniciar.this,Integrantes.class));
+        finish();
+    }
+
+    public void onClickcategorias(View view)
+    {
+        startActivity(new Intent(ActivityIniciar.this,ActivityCategoria.class));
+        finish();
+    }
+
+    public void onClickHistorialP(View view)
+    {
+        startActivity(new Intent(ActivityIniciar.this,ActivityHistorialPedido.class));
+        finish();
+    }
+
+    public void onClickVCarrito(View view)
+    {
+        startActivity(new Intent(ActivityIniciar.this,ActivityVerCarrito.class));
+        finish();
+    }
+
 }
