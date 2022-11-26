@@ -32,17 +32,34 @@ public BottomNavigationView bottomNavigationView;
 
     }
 
-    public void miPerfil(View view)
+    public void onClickmiPerfil(View view)
     {
         startActivity(new Intent(ActivityIniciar.this,ActivityPerfilUsuario.class));
+        finish();
     }
 
-    public void Integrantes(View view)
+    public void onClickIntegrantes(View view)
     {
         startActivity(new Intent(ActivityIniciar.this,Integrantes.class));
+        finish();
     }
 
+    public void onClickcategorias(View view)
+    {
+        startActivity(new Intent(ActivityIniciar.this,ActivityCategoria.class));
+        finish();
+    }
 
+    public void onClickHistorialP(View view)
+    {
+        startActivity(new Intent(ActivityIniciar.this,ActivityHistorialPedido.class));
+        finish();
+    }
 
+    public void onClickVCarrito(View view)
+    {
+        startActivity(new Intent(ActivityIniciar.this,ActivityVerCarrito.class));
+        finish();
+    }
 
 }

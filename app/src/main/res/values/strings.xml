@@ -33,4 +33,6 @@
     <string name="nombrePerfil">Nombre</string>
     <string name="telefonoPerfil">Telefono</string>
     <string name="mi_perfil_admin">Mi Perfil</string>
+    <string name="historial_de_pedidos">Historial de pedidos</string>
+    <string name="ver_carritos">Ver carrito</string>
 </resources>
