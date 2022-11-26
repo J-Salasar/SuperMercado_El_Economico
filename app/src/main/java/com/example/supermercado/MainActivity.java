@@ -114,12 +114,35 @@ public class MainActivity extends AppCompatActivity {
                         JSONObject rowcontacto=contactoarray.getJSONObject(i);
                         cuenta=new validar_sesion(
                                 rowcontacto.getString("validar"),
-                                rowcontacto.getString("estado")
+                                rowcontacto.getString("estado"),
+                                rowcontacto.getString("rango")
                         );
                     }
                     if(cuenta.getValidar().equals("aprobado")){
                         if(cuenta.getEstado().equals("Activo")){
-                            pagina();
+                            if(cuenta.getRango().equals("Usuario")){
+                                pagina();
+                            }
+                            else{
+                                if(cuenta.getRango().equals("Administrador")){
+
+                                }
+                                else{
+                                    if(cuenta.getRango().equals("Inventario")){
+
+                                    }
+                                    else{
+                                        if(cuenta.getRango().equals("Repartidor")){
+
+                                        }
+                                        else{
+                                            if(cuenta.getRango().equals("Fundador")){
+
+                                            }
+                                        }
+                                    }
+                                }
+                            }
                         }
                         else{
                             if(cuenta.getEstado().equals("Desactivado")){
