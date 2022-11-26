@@ -3,7 +3,9 @@ package com.example.supermercado;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.TextView;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
@@ -25,5 +27,22 @@ public BottomNavigationView bottomNavigationView;
 
         //bottomNavigationView=(BottomNavigationView) findViewById(R.id.boton_de_navegacion);
         //getSupportFragmentManager().beginTransaction().replace(R.id.containerMain.);
+
+
+
     }
+
+    public void miPerfil(View view)
+    {
+        startActivity(new Intent(ActivityIniciar.this,ActivityPerfilUsuario.class));
+    }
+
+    public void Integrantes(View view)
+    {
+        startActivity(new Intent(ActivityIniciar.this,Integrantes.class));
+    }
+
+
+
+
 }

@@ -30,4 +30,6 @@
     <string name="historial_de_ordenes" />
     <string name="acerca_de" />
     <string name="mi_perfil" />
+    <string name="nombrePerfil">Nombre</string>
+    <string name="telefonoPerfil">Telefono</string>
 </resources>

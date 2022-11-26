@@ -4,8 +4,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/fondomenu"
+    android:background="@drawable/iconomenud"
     tools:context=".ActivityIniciar">
+
 
     <TextView
         android:id="@+id/textView3"
@@ -14,9 +15,10 @@
         android:text="@string/activo"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.838"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.912" />
+        app:layout_constraintVertical_bias="0.216" />
 
     <TextView
         android:id="@+id/textView5"
@@ -26,6 +28,8 @@
         android:layout_marginEnd="20dp"
         android:text="@string/bienvenido"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textColor="#EFEFEF"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -38,6 +42,8 @@
         android:layout_width="173dp"
         android:layout_height="35dp"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -50,10 +56,11 @@
         android:layout_width="405dp"
         android:layout_height="526dp"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="0dp">
+        app:layout_constraintVertical_bias="0.985"
+        tools:ignore="MissingConstraints">
 
 
         <GridLayout
@@ -237,10 +244,12 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:gravity="center"
+                    android:onClick="miPerfil"
                     android:orientation="vertical"
                     android:padding="16dp">
 
                     <ImageView
+                        android:id="@+id/imgMiPerfil"
                         android:layout_width="100dp"
                         android:layout_height="100dp"
                         android:background="@drawable/profile_icon_icons_com_71114" />
@@ -271,10 +280,11 @@
                 app:cardElevation="5dp">
 
                 <LinearLayout
-                    android:id="@+id/btnAcercaD"
+                    android:id="@+id/btnIntegrantes"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:gravity="center"
+                    android:onClick="Integrantes"
                     android:orientation="vertical"
                     android:padding="16dp">
 

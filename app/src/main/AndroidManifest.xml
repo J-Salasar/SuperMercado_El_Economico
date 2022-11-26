@@ -42,10 +42,24 @@
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
         <activity
+            android:name=".Integrantes"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".ActivityPerfilUsuario"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
             android:name=".Repartidor.ActivityMisPedidos"
             android:exported="false">
             <meta-data
-                 android:name="android.app.lib_name"
+                android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
@@ -77,14 +91,14 @@
                 android:value="" />
         </activity>
         <activity
-            android:name=".ActivityPerfilAdmin"
+            android:name=".Admin.ActivityPerfilAdmin"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
-            android:name=".ActivityRegistrarRepartidor"
+            android:name=".Admin.ActivityRegistrarRepartidor"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
