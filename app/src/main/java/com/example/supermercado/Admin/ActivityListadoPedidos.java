@@ -6,11 +6,11 @@ import android.os.Bundle;
 
 import com.example.supermercado.R;
 
-public class ActivityDasboardadmin extends AppCompatActivity {
+public class ActivityListadoPedidos extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_dasboardadmin);
+        setContentView(R.layout.activity_listado_pedidos);
     }
 }
