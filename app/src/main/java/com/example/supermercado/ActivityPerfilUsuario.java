@@ -11,7 +11,6 @@ import android.Manifest;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
 import android.os.Build;
 import android.os.Bundle;
 import android.provider.MediaStore;
@@ -22,18 +21,8 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Toast;
 
-import com.android.volley.AuthFailureError;
-import com.android.volley.Request;
-import com.android.volley.RequestQueue;
-import com.android.volley.Response;
-import com.android.volley.VolleyError;
-import com.android.volley.toolbox.StringRequest;
-import com.android.volley.toolbox.Volley;
-
 import java.io.ByteArrayOutputStream;
 import java.util.Base64;
-import java.util.HashMap;
-import java.util.Map;
 
 public class ActivityPerfilUsuario extends AppCompatActivity {
     public EditText nombre,apellido,telefono,correo,password,usuario;

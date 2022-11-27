@@ -2,6 +2,7 @@ package com.example.supermercado.Admin;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
@@ -18,15 +19,15 @@ public class ActivityAdministrador extends AppCompatActivity {
 
     public void onClickProducto(View view)
     {
-
+       /* startActivity();*/
     }
     public void onClickRepartidor(View view)
     {
-
+        startActivity(new Intent(ActivityAdministrador.this,ActivityRegistrarRepartidor.class));
     }
 
     public void onClickNuevoInentario(View view)
     {
-
+        startActivity(new Intent(ActivityAdministrador.this,ActivityNuevoInventario.class));
     }
 }
