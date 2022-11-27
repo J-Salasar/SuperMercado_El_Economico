@@ -57,6 +57,7 @@ public class ActivityPerfilUsuario extends AppCompatActivity {
         imgUser=(ImageView) findViewById(R.id.imgRUsersM);
         Actualizar=(Button) findViewById(R.id.btnModificar);
 
+
         /*nombre.setText(getIntent().getStringExtra("nombre"));
         apellido.setText(getIntent().getStringExtra("apellido"));
         telefono.setText(getIntent().getStringExtra("telefono"));
@@ -64,7 +65,6 @@ public class ActivityPerfilUsuario extends AppCompatActivity {
         password.setText(getIntent().getStringExtra("clave"));
         usuario.setText(getIntent().getStringExtra("usuario"));
         id=getIntent().getStringExtra("id");*/
-
         Actualizar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
