@@ -15,10 +15,11 @@
         android:text="@string/activo"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.956"
+        app:layout_constraintHorizontal_bias="0.924"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.216" />
+        app:layout_constraintVertical_bias="0.174" />
+
 
     <TextView
         android:id="@+id/textView5"
@@ -32,10 +33,10 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.059"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.021" />
+        app:layout_constraintVertical_bias="0.02" />
 
     <TextView
         android:id="@+id/txtBienvendioUser"
@@ -46,208 +47,160 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/textView5"
+        app:layout_constraintHorizontal_bias="0.033"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.02" />
+        app:layout_constraintVertical_bias="0.071" />
 
-
-    <ScrollView
-        android:layout_width="405dp"
-        android:layout_height="490dp"
+    <LinearLayout
+        android:layout_width="395dp"
+        android:layout_height="397dp"
+        android:layout_marginTop="130dp"
+        android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.738"
-        tools:ignore="MissingConstraints">
+        app:layout_constraintTop_toTopOf="parent">
 
 
-        <GridLayout
+        <ScrollView
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:alignmentMode="alignMargins"
-            android:columnCount="2"
-            android:columnOrderPreserved="false"
-            android:rowCount="4">
+            android:layout_height="match_parent">
 
 
-            <androidx.cardview.widget.CardView
-                android:layout_width="150dp"
-                android:layout_height="200dp"
-                android:layout_rowWeight="1"
-                android:layout_columnWeight="1"
-                android:layout_margin="12dp"
-                app:cardCornerRadius="10dp"
-                app:cardElevation="5dp"
-                tools:ignore="MissingClass">
+            <GridLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:alignmentMode="alignMargins"
+                android:columnCount="1"
+                android:columnOrderPreserved="false"
+                android:rowCount="4">
 
-                <LinearLayout
-                    android:id="@+id/btnCategoria"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:gravity="center"
-                    android:orientation="vertical"
-                    android:padding="16dp">
 
-                    <ImageView
-                        android:layout_width="100dp"
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/btnProductoAdmin"
+                    android:layout_width="40dp"
+                    android:layout_height="100dp"
+                    android:layout_rowWeight="1"
+                    android:layout_columnWeight="1"
+                    android:layout_margin="12dp"
+                    android:onClick="onClickProducto"
+                    app:cardCornerRadius="25dp"
+                    app:cardElevation="5dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="112dp"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:padding="16dp">
+
+                        <ImageView
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            app:srcCompat="@drawable/pedidos" />
+
+
+                        <TextView
+                            android:layout_width="155dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="0dp"
+                            android:text="Productos"
+                            android:textAlignment="center"
+                            android:textColor="@color/black"
+                            android:textSize="22dp"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/btnRepartidorRegistrar"
+                    android:layout_width="40dp"
+                    android:layout_height="100dp"
+                    android:layout_rowWeight="1"
+                    android:layout_columnWeight="1"
+                    android:layout_margin="12dp"
+                    app:cardCornerRadius="25dp"
+                    app:cardElevation="5dp"
+                    tools:onClick="onClickRepartidor">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="115dp"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:padding="16dp">
+
+                        <ImageView
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            tools:srcCompat="@drawable/repartidor" />
+
+
+                        <TextView
+                            android:layout_width="155dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="3dp"
+                            android:text="Registrar Repartidor"
+                            android:textAlignment="center"
+                            android:textColor="@color/black"
+                            android:textSize="20dp"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/btnVercarrito"
+                    android:layout_width="40dp"
+                    android:layout_height="100dp"
+                    android:layout_rowWeight="1"
+                    android:layout_columnWeight="1"
+                    android:layout_margin="12dp"
+                    android:onClick="onClickNuevoInentario"
+                    app:cardCornerRadius="25dp"
+                    app:cardElevation="5dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
                         android:layout_height="100dp"
-                        android:background="@drawable/pedidos" />
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:padding="16dp">
+
+                        <ImageView
+                            android:layout_width="101dp"
+                            android:layout_height="100dp"
+                            android:padding="15dp"
+                            app:srcCompat="@drawable/regis_admin" />
 
 
-                    <TextView
-                        android:layout_width="114dp"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="2dp"
-                        android:text="Pedidos"
-                        android:textAlignment="center"
-                        android:textColor="@color/black"
-                        android:textSize="18sp"
-                        android:textStyle="bold" />
+                        <TextView
+                            android:layout_width="189dp"
+                            android:layout_height="47dp"
+                            android:layout_marginTop="0dp"
+                            android:text="Crear Inventario"
+                            android:textAlignment="center"
+                            android:textColor="@color/black"
+                            android:textSize="20dp"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
 
 
-                </LinearLayout>
+            </GridLayout>
 
-            </androidx.cardview.widget.CardView>
-
-            <androidx.cardview.widget.CardView
-                android:layout_width="150dp"
-                android:layout_height="200dp"
-                android:layout_rowWeight="1"
-                android:layout_columnWeight="1"
-                android:layout_margin="12dp"
-                app:cardCornerRadius="10dp"
-                app:cardElevation="5dp"
-                tools:ignore="MissingClass">
-
-                <LinearLayout
-                    android:id="@+id/btnUbicacion"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:gravity="center"
-                    android:orientation="vertical"
-                    android:padding="16dp"
-                    tools:ignore="MissingClass">
-
-                    <ImageView
-                        android:layout_width="100dp"
-                        android:layout_height="100dp"
-                        android:background="@drawable/repartidor"
-                        tools:ignore="MissingClass" />
+        </ScrollView>
 
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="2dp"
-                        android:text="Registrar Repartidor"
-                        android:textAlignment="center"
-                        android:textColor="@color/black"
-                        android:textSize="18sp"
-                        android:textStyle="bold" />
+    </LinearLayout>
 
-
-                </LinearLayout>
-
-            </androidx.cardview.widget.CardView>
-
-            <androidx.cardview.widget.CardView
-                android:layout_width="150dp"
-                android:layout_height="200dp"
-                android:layout_rowWeight="1"
-                android:layout_columnWeight="1"
-                android:layout_margin="12dp"
-                app:cardCornerRadius="10dp"
-                app:cardElevation="5dp">
-
-                <LinearLayout
-                    android:id="@+id/btnVerCarrito"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:gravity="center"
-                    android:orientation="vertical"
-                    android:padding="16dp"
-                    tools:ignore="MissingClass,UseCompoundDrawables">
-
-                    <ImageView
-                        android:layout_width="100dp"
-                        android:layout_height="100dp"
-                        android:background="@drawable/regis_admin" />
-
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="53dp"
-                        android:layout_marginTop="2dp"
-                        android:text="Registrar Administrador"
-                        android:textAlignment="center"
-                        android:textColor="@color/black"
-                        android:textSize="18sp"
-                        android:textStyle="bold" />
-
-
-                </LinearLayout>
-
-            </androidx.cardview.widget.CardView>
-
-            <androidx.cardview.widget.CardView
-                android:layout_width="150dp"
-                android:layout_height="200dp"
-                android:layout_rowWeight="1"
-                android:layout_columnWeight="1"
-                android:layout_margin="12dp"
-                app:cardCornerRadius="10dp"
-                app:cardElevation="5dp">
-
-                <LinearLayout
-                    android:id="@+id/btnDashb"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:gravity="center"
-                    android:orientation="vertical"
-                    android:padding="16dp">
-
-                    <ImageView
-                        android:layout_width="100dp"
-                        android:layout_height="100dp"
-                        android:background="@drawable/profile_icon_icons_com_71114" />
-
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="2dp"
-                        android:text="@string/historial_de_ordenes"
-                        android:textAlignment="center"
-                        android:textColor="@color/black"
-                        android:textSize="18sp"
-                        android:textStyle="bold"
-                        tools:text="Mi Perfil" />
-
-
-                </LinearLayout>
-
-            </androidx.cardview.widget.CardView>
-
-
-        </GridLayout>
-
-    </ScrollView>
-
-    <TextView
-        android:id="@+id/textView13"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text=" DASHBOARD ADMINISTRADOR"
-        android:textSize="18sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.105"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.217" />
 
     <Button
         android:id="@+id/button"
@@ -257,8 +210,21 @@
         android:text="EXIT"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.582"
+        app:layout_constraintHorizontal_bias="0.529"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.994" />
+        app:layout_constraintVertical_bias="0.961" />
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="76dp"
+        android:layout_height="71dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.976"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.022"
+        app:srcCompat="@drawable/ic_baseline_account_circle_24" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

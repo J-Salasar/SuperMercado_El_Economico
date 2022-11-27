@@ -56,14 +56,7 @@
                 android:value="" />
         </activity>
         <activity
-            android:name=".ActivityCategoria"
-            android:exported="false">
-            <meta-data
-                android:name="android.app.lib_name"
-                android:value="" />
-        </activity>
-        <activity
-            android:name=".Integrantes"
+            android:name=".ActivityProductos"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
@@ -126,7 +119,7 @@
                 android:value="" />
         </activity>
         <activity
-            android:name=".Admin.ActivityRegistraAdmin"
+            android:name=".Admin.ActivityNuevoInventario"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"

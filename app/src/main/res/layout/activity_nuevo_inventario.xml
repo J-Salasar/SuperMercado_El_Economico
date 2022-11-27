@@ -4,8 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Admin.ActivityPerfilAdmin"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    tools:context=".Admin.ActivityNuevoInventario">
 
 
     <LinearLayout
@@ -14,29 +14,35 @@
         android:layout_height="65dp"
         android:background="#823E24"
         android:orientation="horizontal"
-        android:padding="10dp">
+        android:padding="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
 
 
         <ImageView
-            android:id="@+id/imgVolver2"
+            android:id="@+id/imgVolverAdmin"
             android:layout_width="45dp"
             android:layout_height="match_parent"
             android:background="@drawable/ic_baseline_arrow_back_24"
-            android:gravity="center"
-            android:onClick="volverMenuAdmin" />
+            android:gravity="center" />
 
         <TextView
             android:layout_width="341dp"
             android:layout_height="match_parent"
             android:fontFamily="sans-serif"
-            android:text="Mi Perfil"
-            android:textAlignment="center"
+            android:gravity="center"
+            android:text="Crear Inventario"
             android:textColor="#FFFFFF"
             android:textSize="25sp"
             android:textStyle="bold" />
 
 
     </LinearLayout>
+
 
 
     <ScrollView
@@ -65,10 +71,10 @@
                     android:orientation="horizontal" />
 
                 <ImageView
-                    android:id="@+id/imgPadmin"
+                    android:id="@+id/imgRInventario"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:onClick="permisos_camara_admin"
+                    android:onClick="permisos_camara_inventario"
                     app:srcCompat="@drawable/ic_baseline_add_a_photo_24" />
             </LinearLayout>
 
@@ -76,15 +82,15 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_marginTop="10dp"
-                android:text="@string/nombrePerfil"
+                android:text="Nombre "
                 android:textAppearance="@style/TextAppearance.AppCompat.Body2"
                 android:textColor="#000000"
                 android:textSize="16sp" />
 
             <EditText
-                android:id="@+id/txtRNombreAdmin"
+                android:id="@+id/txtRNombreInventario"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="55dp"
                 android:layout_marginTop="5dp"
                 android:backgroundTint="@color/cardview_shadow_start_color"
                 android:ems="10"
@@ -103,7 +109,7 @@
                 android:textSize="16sp" />
 
             <EditText
-                android:id="@+id/txtRApellidoAdmin"
+                android:id="@+id/txtRApellidoInventario"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
@@ -116,13 +122,13 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_marginTop="10dp"
-                android:text="@string/telefonoPerfil"
+                android:text="Telefono"
                 android:textAppearance="@style/TextAppearance.AppCompat.Body2"
                 android:textColor="#000000"
                 android:textSize="16sp" />
 
             <EditText
-                android:id="@+id/txtRTelefonoAdmin"
+                android:id="@+id/txtRTelefonoInventario"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
@@ -144,7 +150,7 @@
                 android:textSize="16sp" />
 
             <EditText
-                android:id="@+id/txtRCorreoAdmin"
+                android:id="@+id/txtRCorreoInventario"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
@@ -162,7 +168,7 @@
                 android:textSize="16sp" />
 
             <EditText
-                android:id="@+id/txtRClaveAdmin"
+                android:id="@+id/txtRClaveInventario"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
@@ -180,7 +186,7 @@
                 android:textSize="16sp" />
 
             <EditText
-                android:id="@+id/txtRUsuarioAdmin"
+                android:id="@+id/txtRUsuarioInventario"
                 android:layout_width="match_parent"
                 android:layout_height="57dp"
                 android:layout_marginTop="5dp"
@@ -192,12 +198,12 @@
 
 
             <Button
-                android:id="@+id/btnModificarAdmin"
+                android:id="@+id/btnRRegistrarInventario"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:layout_marginTop="15dp"
                 android:background="@drawable/radiusbutton"
-                android:text="Actualizar Datos"
+                android:text="Guardar"
                 android:textColor="@color/white"
                 android:textSize="16sp" />
 
@@ -208,6 +214,5 @@
         </LinearLayout>
 
     </ScrollView>
-
 
 </LinearLayout>

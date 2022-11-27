@@ -7,18 +7,18 @@ import android.os.Bundle;
 import android.view.KeyEvent;
 import android.view.View;
 
-public class ActivityCategoria extends AppCompatActivity {
+public class ActivityProductos extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_categoria);
+        setContentView(R.layout.activity_productos);
     }
 
 
     public void onClickRegresar(View view)
     {
-        startActivity(new Intent(ActivityCategoria.this,MainActivity.class));
+        startActivity(new Intent(ActivityProductos.this,ActivityIniciar.class));
         finish();
     }
 

@@ -18,7 +18,7 @@
 
 
         <ImageView
-            android:id="@+id/imgVolver"
+            android:id="@+id/imgVolver2"
             android:layout_width="45dp"
             android:layout_height="match_parent"
             android:background="@drawable/ic_baseline_arrow_back_24"
@@ -64,7 +64,7 @@
                     android:orientation="horizontal" />
 
                 <ImageView
-                    android:id="@+id/imgRUsers"
+                    android:id="@+id/imgRUsersM"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:onClick="permisos_camara_modificar"
@@ -81,7 +81,7 @@
                 android:textSize="16sp" />
 
             <EditText
-                android:id="@+id/txtRNombre"
+                android:id="@+id/txtRNombreM"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
@@ -102,7 +102,7 @@
                 android:textSize="16sp" />
 
             <EditText
-                android:id="@+id/txtRApellido"
+                android:id="@+id/txtRApellidoM"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
@@ -121,7 +121,7 @@
                 android:textSize="16sp" />
 
             <EditText
-                android:id="@+id/txtRTelefono"
+                android:id="@+id/txtRTelefonoM"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
@@ -143,7 +143,7 @@
                 android:textSize="16sp" />
 
             <EditText
-                android:id="@+id/txtRCorreo"
+                android:id="@+id/txtRCorreoM"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
@@ -161,7 +161,7 @@
                 android:textSize="16sp" />
 
             <EditText
-                android:id="@+id/txtRClave"
+                android:id="@+id/txtRClaveM"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
@@ -179,7 +179,7 @@
                 android:textSize="16sp" />
 
             <EditText
-                android:id="@+id/txtRUsuario"
+                android:id="@+id/txtRUsuarioM"
                 android:layout_width="match_parent"
                 android:layout_height="57dp"
                 android:layout_marginTop="5dp"
@@ -191,12 +191,12 @@
 
 
             <Button
-                android:id="@+id/btnRRegistrar"
+                android:id="@+id/btnModificar"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:layout_marginTop="15dp"
                 android:background="@drawable/radiusbutton"
-                android:text="@string/crear_usuario"
+                android:text="Actualizar Datos"
                 android:textColor="@color/white"
                 android:textSize="16sp" />
 

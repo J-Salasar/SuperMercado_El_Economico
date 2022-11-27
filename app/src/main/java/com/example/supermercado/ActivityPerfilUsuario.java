@@ -11,7 +11,6 @@ import android.Manifest;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
 import android.os.Build;
 import android.os.Bundle;
 import android.provider.MediaStore;
@@ -22,18 +21,8 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Toast;
 
-import com.android.volley.AuthFailureError;
-import com.android.volley.Request;
-import com.android.volley.RequestQueue;
-import com.android.volley.Response;
-import com.android.volley.VolleyError;
-import com.android.volley.toolbox.StringRequest;
-import com.android.volley.toolbox.Volley;
-
 import java.io.ByteArrayOutputStream;
 import java.util.Base64;
-import java.util.HashMap;
-import java.util.Map;
 
 public class ActivityPerfilUsuario extends AppCompatActivity {
     public EditText nombre,apellido,telefono,correo,password,usuario;
@@ -48,14 +37,15 @@ public class ActivityPerfilUsuario extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_perfil_usuario);
-        nombre=(EditText) findViewById(R.id.txtRNombre) ;
-        apellido=(EditText) findViewById(R.id.txtRApellido);
-        telefono=(EditText) findViewById(R.id.txtRTelefono);
-        correo=(EditText) findViewById(R.id.txtRCorreo);
-        password=(EditText) findViewById(R.id.txtRClave);
-        usuario=(EditText) findViewById(R.id.txtRUsuario);
-        imgUser=(ImageView) findViewById(R.id.imgRUsers);
-        Actualizar=(Button) findViewById(R.id.btnRRegistrar);
+        nombre=(EditText) findViewById(R.id.txtRNombreM) ;
+        apellido=(EditText) findViewById(R.id.txtRApellidoM);
+        telefono=(EditText) findViewById(R.id.txtRTelefonoM);
+        correo=(EditText) findViewById(R.id.txtRCorreoM);
+        password=(EditText) findViewById(R.id.txtRClaveM);
+        usuario=(EditText) findViewById(R.id.txtRUsuarioM);
+        imgUser=(ImageView) findViewById(R.id.imgRUsersM);
+        Actualizar=(Button) findViewById(R.id.btnModificar);
+
 
         /*nombre.setText(getIntent().getStringExtra("nombre"));
         apellido.setText(getIntent().getStringExtra("apellido"));
@@ -64,7 +54,6 @@ public class ActivityPerfilUsuario extends AppCompatActivity {
         password.setText(getIntent().getStringExtra("clave"));
         usuario.setText(getIntent().getStringExtra("usuario"));
         id=getIntent().getStringExtra("id");*/
-
         Actualizar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -88,7 +77,7 @@ public class ActivityPerfilUsuario extends AppCompatActivity {
         }
     }
 
-    public void volverMenu (View view)
+    public void volverMenu(View view)
     {
         startActivity(new Intent(ActivityPerfilUsuario.this,ActivityIniciar.class));
         finish();
@@ -99,12 +88,12 @@ public class ActivityPerfilUsuario extends AppCompatActivity {
             @Override
             public void onResponse(String response) {
                 Toast.makeText(getApplicationContext(), "Actualizacion exitoso", Toast.LENGTH_SHORT).show();
-                nombre.setText("");
-                apellido.setText("");
+                nombre.setEnabled(false);
+                apellido.setEnabled(false);
                 telefono.setText("");
-                correo.setText("");
+                correo.setEnabled(false);;
                 password.setText("");
-                usuario.setText("");
+                usuario.setEnabled(false);;
                /* Intent lista=new Intent(getApplicationContext(),ActivityLista.class);
                 startActivity(lista);*/
          /*   }
