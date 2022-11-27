@@ -48,14 +48,14 @@ public class ActivityPerfilUsuario extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_perfil_usuario);
-        nombre=(EditText) findViewById(R.id.txtRNombre) ;
-        apellido=(EditText) findViewById(R.id.txtRApellido);
-        telefono=(EditText) findViewById(R.id.txtRTelefono);
-        correo=(EditText) findViewById(R.id.txtRCorreo);
-        password=(EditText) findViewById(R.id.txtRClave);
-        usuario=(EditText) findViewById(R.id.txtRUsuario);
-        imgUser=(ImageView) findViewById(R.id.imgRUsers);
-        Actualizar=(Button) findViewById(R.id.btnRRegistrar);
+        nombre=(EditText) findViewById(R.id.txtRNombreM) ;
+        apellido=(EditText) findViewById(R.id.txtRApellidoM);
+        telefono=(EditText) findViewById(R.id.txtRTelefonoM);
+        correo=(EditText) findViewById(R.id.txtRCorreoM);
+        password=(EditText) findViewById(R.id.txtRClaveM);
+        usuario=(EditText) findViewById(R.id.txtRUsuarioM);
+        imgUser=(ImageView) findViewById(R.id.imgRUsersM);
+        Actualizar=(Button) findViewById(R.id.btnModificar);
 
         /*nombre.setText(getIntent().getStringExtra("nombre"));
         apellido.setText(getIntent().getStringExtra("apellido"));
