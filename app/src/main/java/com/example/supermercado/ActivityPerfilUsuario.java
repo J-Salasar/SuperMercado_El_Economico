@@ -88,7 +88,7 @@ public class ActivityPerfilUsuario extends AppCompatActivity {
         }
     }
 
-    public void volverMenu (View view)
+    public void volverMenu(View view)
     {
         startActivity(new Intent(ActivityPerfilUsuario.this,ActivityIniciar.class));
         finish();
@@ -99,12 +99,12 @@ public class ActivityPerfilUsuario extends AppCompatActivity {
             @Override
             public void onResponse(String response) {
                 Toast.makeText(getApplicationContext(), "Actualizacion exitoso", Toast.LENGTH_SHORT).show();
-                nombre.setText("");
-                apellido.setText("");
+                nombre.setEnabled(false);
+                apellido.setEnabled(false);
                 telefono.setText("");
-                correo.setText("");
+                correo.setEnabled(false);;
                 password.setText("");
-                usuario.setText("");
+                usuario.setEnabled(false);;
                /* Intent lista=new Intent(getApplicationContext(),ActivityLista.class);
                 startActivity(lista);*/
          /*   }

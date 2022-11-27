@@ -38,15 +38,10 @@ public BottomNavigationView bottomNavigationView;
         finish();
     }
 
-    public void onClickIntegrantes(View view)
-    {
-        startActivity(new Intent(ActivityIniciar.this,Integrantes.class));
-        finish();
-    }
 
-    public void onClickcategorias(View view)
+    public void onClickProductos(View view)
     {
-        startActivity(new Intent(ActivityIniciar.this,ActivityCategoria.class));
+        startActivity(new Intent(ActivityIniciar.this, ActivityProductos.class));
         finish();
     }
 

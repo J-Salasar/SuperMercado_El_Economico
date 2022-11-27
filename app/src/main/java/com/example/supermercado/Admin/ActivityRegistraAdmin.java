@@ -11,6 +11,6 @@ public class ActivityRegistraAdmin extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_dasboardadmin);
+        setContentView(R.layout.activity_registrar_inventario);
     }
 }
