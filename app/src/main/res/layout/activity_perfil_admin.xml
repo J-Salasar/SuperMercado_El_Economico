@@ -65,7 +65,7 @@
                     android:orientation="horizontal" />
 
                 <ImageView
-                    android:id="@+id/imgRUsersM"
+                    android:id="@+id/imgPadmin"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:onClick="permisos_camara_admin"
