@@ -60,7 +60,7 @@ public class ActivityRestablecer extends AppCompatActivity {
     }
 
     public void generar_codigo() {
-        StringRequest stringRequest = new StringRequest(Request.Method.POST, "http://apk.salasar.xyz/generar_codigo_clave.php", new Response.Listener<String>() {
+        StringRequest stringRequest = new StringRequest(Request.Method.POST, "http://apk.salasar.xyz:25565/generar_codigo_clave.php", new Response.Listener<String>() {
             @Override
             public void onResponse(String response) {
                 try{
@@ -118,7 +118,7 @@ public class ActivityRestablecer extends AppCompatActivity {
     }
 
     public void validar_codigo() {
-        StringRequest stringRequest = new StringRequest(Request.Method.POST, "http://apk.salasar.xyz/validar_codigo_clave.php", new Response.Listener<String>() {
+        StringRequest stringRequest = new StringRequest(Request.Method.POST, "http://apk.salasar.xyz:25565/validar_codigo_clave.php", new Response.Listener<String>() {
             @Override
             public void onResponse(String response) {
                 try{

@@ -157,7 +157,7 @@ public class ActivityRegistrar extends AppCompatActivity {
         }
     }
     public void validar_correo(){
-        StringRequest stringRequest=new StringRequest(Request.Method.POST, "http://apk.salasar.xyz/validar_correo.php", new Response.Listener<String>(){
+        StringRequest stringRequest=new StringRequest(Request.Method.POST, "http://apk.salasar.xyz:25565/validar_correo.php", new Response.Listener<String>(){
             @Override
             public void onResponse(String response) {
                 try{
@@ -197,7 +197,7 @@ public class ActivityRegistrar extends AppCompatActivity {
         requestQueue.add(stringRequest);
     }
     public void validar_usuario(){
-        StringRequest stringRequest=new StringRequest(Request.Method.POST, "http://apk.salasar.xyz/validar_usuario.php", new Response.Listener<String>(){
+        StringRequest stringRequest=new StringRequest(Request.Method.POST, "http://apk.salasar.xyz:25565/validar_usuario.php", new Response.Listener<String>(){
             @Override
             public void onResponse(String response) {
                 try{
@@ -238,7 +238,7 @@ public class ActivityRegistrar extends AppCompatActivity {
         requestQueue.add(stringRequest);
     }
     public void insertar(){
-        StringRequest stringRequest=new StringRequest(Request.Method.POST, "http://apk.salasar.xyz/registrar_usuario.php", new Response.Listener<String>(){
+        StringRequest stringRequest=new StringRequest(Request.Method.POST, "http://apk.salasar.xyz:25565/registrar_usuario.php", new Response.Listener<String>(){
             @Override
             public void onResponse(String response) {
                 try{
@@ -286,7 +286,7 @@ public class ActivityRegistrar extends AppCompatActivity {
         requestQueue.add(stringRequest);
     }
     public void correo(){
-        StringRequest stringRequest=new StringRequest(Request.Method.POST, "http://apk.salasar.xyz/correo_verificar.php", new Response.Listener<String>(){
+        StringRequest stringRequest=new StringRequest(Request.Method.POST, "http://apk.salasar.xyz:25565/correo_verificar.php", new Response.Listener<String>(){
             @Override
             public void onResponse(String response) {
                 try{

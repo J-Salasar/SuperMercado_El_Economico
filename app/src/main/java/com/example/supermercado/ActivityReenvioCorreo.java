@@ -34,7 +34,7 @@ public class ActivityReenvioCorreo extends AppCompatActivity {
         datos();
     }
     public void datos(){
-        StringRequest stringRequest = new StringRequest(Request.Method.POST, "http://apk.salasar.xyz/reenviar_correo.php", new Response.Listener<String>() {
+        StringRequest stringRequest = new StringRequest(Request.Method.POST, "http://apk.salasar.xyz:25565/reenviar_correo.php", new Response.Listener<String>() {
             @Override
             public void onResponse(String response) {
                 try{

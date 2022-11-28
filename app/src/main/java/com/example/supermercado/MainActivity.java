@@ -103,7 +103,7 @@ public class MainActivity extends AppCompatActivity {
         startActivity(menu_principal);
     }
     public void iniciar_sesion(View view) {
-        StringRequest stringRequest = new StringRequest(Request.Method.POST, "http://apk.salasar.xyz/iniciar_sesion.php", new Response.Listener<String>() {
+        StringRequest stringRequest = new StringRequest(Request.Method.POST, "http://apk.salasar.xyz:25565/iniciar_sesion.php", new Response.Listener<String>() {
             @Override
             public void onResponse(String response) {
                 try{
