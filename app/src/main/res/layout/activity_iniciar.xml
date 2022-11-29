@@ -92,11 +92,6 @@
                         android:orientation="horizontal"
                         android:padding="16dp">
 
-                        <ImageView
-                            android:layout_width="100dp"
-                            android:layout_height="wrap_content"
-                            tools:srcCompat="@drawable/_124822_cellphone_mobile_phone_mobile_shopping_mobile_store_shopping_app_113913" />
-
 
                         <TextView
                             android:layout_width="155dp"
@@ -107,6 +102,11 @@
                             android:textColor="@color/black"
                             android:textSize="25dp"
                             android:textStyle="bold" />
+
+                        <ImageView
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            app:srcCompat="@drawable/_124822_cellphone_mobile_phone_mobile_shopping_mobile_store_shopping_app_113913" />
 
                     </LinearLayout>
 

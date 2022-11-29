@@ -19,6 +19,7 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
+import com.example.supermercado.Admin.ActivityAdministrador;
 import com.example.supermercado.configuracion.validar_sesion;
 import com.example.supermercado.configuracion.validar_usuario;
 import org.json.JSONArray;
@@ -101,6 +102,23 @@ public class MainActivity extends AppCompatActivity {
         clave.setText("");
         startActivity(menu_principal);
     }
+    public void pagina3(){
+        Intent menu_principal=new Intent(getApplicationContext(), ActivityAdministrador.class);
+        menu_principal.putExtra("user",usuario.getText().toString().toLowerCase());
+        SharedPreferences prefe=getSharedPreferences("usuario",Context.MODE_PRIVATE);
+        SharedPreferences.Editor O_editor=prefe.edit();
+        O_editor.putString("usuario",usuario.getText().toString());
+        O_editor.commit();
+        if(recordar_clave.isChecked()==true){
+            SharedPreferences prefe1=getSharedPreferences("clave",Context.MODE_PRIVATE);
+            SharedPreferences.Editor O_editor1=prefe1.edit();
+            O_editor1.putString("clave",clave.getText().toString());
+            O_editor1.commit();
+        }
+        usuario.setText("");
+        clave.setText("");
+        startActivity(menu_principal);
+    }
     public void iniciar_sesion(View view) {
         StringRequest stringRequest = new StringRequest(Request.Method.POST, "http://apk.salasar.xyz:25565/iniciar_sesion.php", new Response.Listener<String>() {
             @Override
@@ -124,20 +142,13 @@ public class MainActivity extends AppCompatActivity {
                             }
                             else{
                                 if(cuenta.getRango().equals("Administrador")){
-
+                                    pagina3();
                                 }
-                                else{
-                                    if(cuenta.getRango().equals("Inventario")){
-
+                                else {
+                                    if (cuenta.getRango().equals("Repartidor")) {
                                     }
-                                    else{
-                                        if(cuenta.getRango().equals("Repartidor")){
-
-                                        }
-                                        else{
-                                            if(cuenta.getRango().equals("Fundador")){
-
-                                            }
+                                    else {
+                                        if (cuenta.getRango().equals("Fundador")) {
                                         }
                                     }
                                 }
@@ -146,6 +157,10 @@ public class MainActivity extends AppCompatActivity {
                         else{
                             if(cuenta.getEstado().equals("Desactivado")){
                                 pagina2();
+                            }
+                            else{
+                                if(cuenta.getEstado().equals("Bloqueado")){
+                                }
                             }
                         }
                     }
