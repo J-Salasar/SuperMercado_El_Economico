@@ -7,6 +7,7 @@ import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
 
 import android.Manifest;
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.os.Build;
@@ -14,19 +15,37 @@ import android.os.Bundle;
 import android.provider.MediaStore;
 import android.view.KeyEvent;
 import android.view.View;
+import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.example.supermercado.R;
 
 public class ActivityPerfilAdmin extends AppCompatActivity {
+    public EditText edtNombre,edtApellido,edtTelefono,edtCorreo,edtClave,edtUsuario;
+    public ImageView edtImagen;
     private static final int REQUESTCODECAMARA=100;
     private static final int REQUESTTAKEFOTO=101;
     private String currentPhotoPath;
+    @SuppressLint("MissingInflatedId")
     @RequiresApi(api = Build.VERSION_CODES.O)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_perfil_admin);
+
+        edtNombre=(EditText) findViewById(R.id.txtRNombreAdmin);
+        edtApellido=(EditText) findViewById(R.id.txtRApellidoAdmin);
+        edtTelefono=(EditText) findViewById(R.id.txtRTelefonoAdmin);
+        edtCorreo=(EditText) findViewById(R.id.txtRCorreoAdmin);
+        edtClave=(EditText) findViewById(R.id.txtRClaveAdmin);
+        edtUsuario=(EditText) findViewById(R.id.txtRUsuarioAdmin);
+        edtImagen=(ImageView) findViewById(R.id.imgPadmin);
+        edtNombre.setEnabled(false);
+        edtApellido.setEnabled(false);
+        edtCorreo.setEnabled(false);
+        edtUsuario.setEnabled(false);
+
     }
 
 

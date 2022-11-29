@@ -23,7 +23,8 @@
             android:layout_height="match_parent"
             android:background="@drawable/ic_baseline_arrow_back_24"
             android:gravity="center"
-            android:onClick="volverMenu" />
+            android:onClick="volverMenu"
+            tools:ignore="UsingOnClickInXml" />
 
         <TextView
             android:layout_width="341dp"
