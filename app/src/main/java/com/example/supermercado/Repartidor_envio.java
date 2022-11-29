@@ -31,13 +31,13 @@ import java.util.Base64;
 import java.util.HashMap;
 import java.util.Map;
 
-public class ActivityRepartidor extends AppCompatActivity {
+public class Repartidor_envio extends AppCompatActivity {
     private TextView usuario,nombre,dinero;
     private ImageView imagen;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_repartidor);
+        setContentView(R.layout.activity_repartidor_envio);
         usuario=(TextView) findViewById(R.id.usuario_texto50);
         usuario.setText(getIntent().getStringExtra("user"));
         nombre=(TextView) findViewById(R.id.nombre_texto50);
@@ -90,21 +90,25 @@ public class ActivityRepartidor extends AppCompatActivity {
     public void productos50(View view){
         Intent intent=new Intent(this,ActivityProductos.class);
         intent.putExtra("user",getIntent().getStringExtra("user"));
+        intent.putExtra("rango",getIntent().getStringExtra("rango"));
         startActivity(intent);
     }
     public void historial_pedidos50(View view){
         Intent intent=new Intent(this,ActivityHistorialPedido.class);
         intent.putExtra("user",getIntent().getStringExtra("user"));
+        intent.putExtra("rango",getIntent().getStringExtra("rango"));
         startActivity(intent);
     }
     public void ver_carrito50(View view){
         Intent intent=new Intent(this, ActivityVerCarrito.class);
         intent.putExtra("user",getIntent().getStringExtra("user"));
+        intent.putExtra("rango",getIntent().getStringExtra("rango"));
         startActivity(intent);
     }
     public void perfil_usuario50(View view){
         Intent intent=new Intent(this,ActivityPerfilUsuario.class);
         intent.putExtra("user",getIntent().getStringExtra("user"));
+        intent.putExtra("rango",getIntent().getStringExtra("rango"));
         startActivity(intent);
     }
     public void cerrar50(View view){
@@ -114,6 +118,7 @@ public class ActivityRepartidor extends AppCompatActivity {
     public void entregar50(View view){
         Intent intent=new Intent(this, ActivityDetallePedidos.class);
         intent.putExtra("user",getIntent().getStringExtra("user"));
+        intent.putExtra("rango",getIntent().getStringExtra("rango"));
         startActivity(intent);
     }
     public boolean onKeyDown(int keyCode, KeyEvent event){

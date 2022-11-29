@@ -7,14 +7,13 @@
     tools:context=".ActivityProductos">
 
 
-
-
     <LinearLayout
 
+        android:id="@+id/linearLayout3"
         android:layout_width="match_parent"
         android:layout_height="65dp"
-        android:layout_margin="0dp"
 
+        android:layout_margin="0dp"
         android:background="#823E24"
         android:orientation="horizontal"
         android:padding="10dp"
@@ -27,7 +26,7 @@
 
 
         <ImageView
-            android:id="@+id/imgVolver1"
+            android:id="@+id/retroceder90"
             android:layout_width="44dp"
             android:layout_height="46dp"
             android:layout_marginTop="5dp"
@@ -35,7 +34,7 @@
 
 
             android:gravity="center"
-            android:onClick="onClickRegresar"
+            android:onClick="volver90"
             tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
 
         <TextView
@@ -52,7 +51,46 @@
 
     </LinearLayout>
 
+    <ListView
+        android:id="@+id/lista1_basedatos"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="130dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.97" />
 
+    <EditText
+        android:id="@+id/editTextTextPersonName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="110dp"
+        android:ems="10"
+        android:hint="Buscardor"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.079"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.112" />
+
+    <Button
+        android:id="@+id/texthola"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/radiusbutton"
+        android:text="Buscar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.962"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.108" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

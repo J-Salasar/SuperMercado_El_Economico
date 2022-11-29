@@ -122,7 +122,7 @@ public class MainActivity extends AppCompatActivity {
         startActivity(menu_principal);
     }
     public void pagina4(String rango){
-        Intent menu_principal=new Intent(getApplicationContext(), ActivityRepartidor.class);
+        Intent menu_principal=new Intent(getApplicationContext(), Repartidor_envio.class);
         menu_principal.putExtra("user",usuario.getText().toString().toLowerCase());
         menu_principal.putExtra("rango",rango);
         SharedPreferences prefe=getSharedPreferences("usuario",Context.MODE_PRIVATE);

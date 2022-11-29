@@ -42,10 +42,10 @@
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
         <activity
-            android:name=".ActivityEnvios"
+            android:name=".Repartidor_envio"
             android:exported="false" />
         <activity
-            android:name=".ActivityRepartidor"
+            android:name=".ActivityEnvios"
             android:exported="false" />
         <activity
             android:name=".ActivityVerCarrito"
@@ -126,13 +126,6 @@
         </activity>
         <activity
             android:name=".Admin.ActivityNuevoInventario"
-            android:exported="false">
-            <meta-data
-                android:name="android.app.lib_name"
-                android:value="" />
-        </activity>
-        <activity
-            android:name=".Repartidor.ActivityRepartidor"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
