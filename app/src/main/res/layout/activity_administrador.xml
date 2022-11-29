@@ -9,7 +9,7 @@
 
 
     <TextView
-        android:id="@+id/textView3"
+        android:id="@+id/usuario_texto"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/activo"
@@ -39,7 +39,7 @@
         app:layout_constraintVertical_bias="0.02" />
 
     <TextView
-        android:id="@+id/txtBienvendioUser"
+        android:id="@+id/nombre_texto"
         android:layout_width="173dp"
         android:layout_height="35dp"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"

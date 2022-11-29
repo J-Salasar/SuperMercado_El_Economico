@@ -70,7 +70,6 @@ public class MainActivity extends AppCompatActivity {
     public void pagina(){
         Intent menu_principal=new Intent(getApplicationContext(),ActivityIniciar.class);
         menu_principal.putExtra("user",usuario.getText().toString().toLowerCase());
-        menu_principal.putExtra(ActivityIniciar.usuarios,usuario.getText().toString());
         SharedPreferences prefe=getSharedPreferences("usuario",Context.MODE_PRIVATE);
         SharedPreferences.Editor O_editor=prefe.edit();
         O_editor.putString("usuario",usuario.getText().toString());
