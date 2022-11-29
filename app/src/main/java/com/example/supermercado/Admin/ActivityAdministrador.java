@@ -38,6 +38,7 @@ import java.util.Map;
 public class ActivityAdministrador extends AppCompatActivity {
     private TextView usuario,nombre,dinero;
     private ImageView imagen;
+    private String rango;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -47,6 +48,7 @@ public class ActivityAdministrador extends AppCompatActivity {
         nombre=(TextView) findViewById(R.id.nombre_texto1);
         imagen=(ImageView) findViewById(R.id.foto_perfil1);
         dinero=(TextView) findViewById(R.id.dinero_texto1);
+        rango=getIntent().getStringExtra("rango");
         informacion();
     }
     public void informacion(){
@@ -94,21 +96,25 @@ public class ActivityAdministrador extends AppCompatActivity {
     public void productos1(View view){
         Intent intent=new Intent(this, ActivityProductos.class);
         intent.putExtra("user",getIntent().getStringExtra("user"));
+        intent.putExtra("rango",getIntent().getStringExtra("rango"));
         startActivity(intent);
     }
     public void historial_pedidos1(View view){
         Intent intent=new Intent(this, ActivityHistorialPedido.class);
         intent.putExtra("user",getIntent().getStringExtra("user"));
+        intent.putExtra("rango",getIntent().getStringExtra("rango"));
         startActivity(intent);
     }
     public void ver_carrito1(View view){
         Intent intent=new Intent(this, ActivityVerCarrito.class);
         intent.putExtra("user",getIntent().getStringExtra("user"));
+        intent.putExtra("rango",getIntent().getStringExtra("rango"));
         startActivity(intent);
     }
     public void perfil_usuario1(View view){
         Intent intent=new Intent(this, ActivityPerfilUsuario.class);
         intent.putExtra("user",getIntent().getStringExtra("user"));
+        intent.putExtra("rango",getIntent().getStringExtra("rango"));
         startActivity(intent);
     }
     public void cerrar1(View view){
@@ -118,16 +124,25 @@ public class ActivityAdministrador extends AppCompatActivity {
     public void inventario1(View view){
         Intent intent=new Intent(this, ActivityNuevoInventario.class);
         intent.putExtra("user",getIntent().getStringExtra("user"));
+        intent.putExtra("rango",getIntent().getStringExtra("rango"));
         startActivity(intent);
     }
     public void crear_repartidor(View view){
         Intent intent=new Intent(this, ActivityRegistrarRepartidor.class);
         intent.putExtra("user",getIntent().getStringExtra("user"));
+        intent.putExtra("rango",getIntent().getStringExtra("rango"));
         startActivity(intent);
     }
     public void lista_pedidos(View view){
         Intent intent=new Intent(this,ActivityListadoPedidos.class);
         intent.putExtra("user",getIntent().getStringExtra("user"));
+        intent.putExtra("rango",getIntent().getStringExtra("rango"));
+        startActivity(intent);
+    }
+    public void crear_admin(View view){
+        Intent intent=new Intent(this,ActivityListadoPedidos.class);
+        intent.putExtra("user",getIntent().getStringExtra("user"));
+        intent.putExtra("rango",getIntent().getStringExtra("rango"));
         startActivity(intent);
     }
     public boolean onKeyDown(int keyCode, KeyEvent event){

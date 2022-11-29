@@ -150,6 +150,7 @@
                     </LinearLayout>
 
                 </androidx.cardview.widget.CardView>
+
                 <androidx.cardview.widget.CardView
                     android:id="@+id/btnHistorial1"
                     android:layout_width="40dp"
@@ -157,7 +158,7 @@
                     android:layout_rowWeight="1"
                     android:layout_columnWeight="4"
                     android:layout_margin="12dp"
-                    android:onClick="onClickProductos"
+                    android:onClick="historial_pedidos1"
                     app:cardCornerRadius="25dp"
                     app:cardElevation="5dp">
 
@@ -261,6 +262,44 @@
                             android:layout_width="100dp"
                             android:layout_height="wrap_content"
                             app:srcCompat="@drawable/profile_icon_icons_com_71114" />
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/btnAdmin"
+                    android:layout_width="40dp"
+                    android:layout_height="100dp"
+                    android:layout_rowWeight="1"
+                    android:layout_columnWeight="7"
+                    android:layout_margin="12dp"
+                    android:onClick="onClickProductos"
+                    app:cardCornerRadius="25dp"
+                    app:cardElevation="5dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="112dp"
+                        android:gravity="center"
+                        android:onClick="crear_admin"
+                        android:orientation="horizontal"
+                        android:padding="16dp">
+
+
+                        <ImageView
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            app:srcCompat="@drawable/regis_admin" />
+
+                        <TextView
+                            android:layout_width="224dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="0dp"
+                            android:text="Administradores"
+                            android:textAlignment="center"
+                            android:textColor="@color/black"
+                            android:textSize="25dp"
+                            android:textStyle="bold" />
 
                     </LinearLayout>
 

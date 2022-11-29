@@ -68,9 +68,10 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
-    public void pagina(){
+    public void pagina(String rango){
         Intent menu_principal=new Intent(getApplicationContext(),ActivityIniciar.class);
         menu_principal.putExtra("user",usuario.getText().toString().toLowerCase());
+        menu_principal.putExtra("rango",rango);
         SharedPreferences prefe=getSharedPreferences("usuario",Context.MODE_PRIVATE);
         SharedPreferences.Editor O_editor=prefe.edit();
         O_editor.putString("usuario",usuario.getText().toString());
@@ -102,9 +103,28 @@ public class MainActivity extends AppCompatActivity {
         clave.setText("");
         startActivity(menu_principal);
     }
-    public void pagina3(){
+    public void pagina3(String rango){
         Intent menu_principal=new Intent(getApplicationContext(), ActivityAdministrador.class);
         menu_principal.putExtra("user",usuario.getText().toString().toLowerCase());
+        menu_principal.putExtra("rango",rango);
+        SharedPreferences prefe=getSharedPreferences("usuario",Context.MODE_PRIVATE);
+        SharedPreferences.Editor O_editor=prefe.edit();
+        O_editor.putString("usuario",usuario.getText().toString());
+        O_editor.commit();
+        if(recordar_clave.isChecked()==true){
+            SharedPreferences prefe1=getSharedPreferences("clave",Context.MODE_PRIVATE);
+            SharedPreferences.Editor O_editor1=prefe1.edit();
+            O_editor1.putString("clave",clave.getText().toString());
+            O_editor1.commit();
+        }
+        usuario.setText("");
+        clave.setText("");
+        startActivity(menu_principal);
+    }
+    public void pagina4(String rango){
+        Intent menu_principal=new Intent(getApplicationContext(), ActivityRepartidor.class);
+        menu_principal.putExtra("user",usuario.getText().toString().toLowerCase());
+        menu_principal.putExtra("rango",rango);
         SharedPreferences prefe=getSharedPreferences("usuario",Context.MODE_PRIVATE);
         SharedPreferences.Editor O_editor=prefe.edit();
         O_editor.putString("usuario",usuario.getText().toString());
@@ -138,14 +158,15 @@ public class MainActivity extends AppCompatActivity {
                     if(cuenta.getValidar().equals("aprobado")){
                         if(cuenta.getEstado().equals("Activo")){
                             if(cuenta.getRango().equals("Usuario")){
-                                pagina();
+                                pagina(cuenta.getRango());
                             }
                             else{
                                 if(cuenta.getRango().equals("Administrador")){
-                                    pagina3();
+                                    pagina3(cuenta.getRango());
                                 }
                                 else {
                                     if (cuenta.getRango().equals("Repartidor")) {
+                                        pagina4(cuenta.getRango());
                                     }
                                     else {
                                         if (cuenta.getRango().equals("Fundador")) {

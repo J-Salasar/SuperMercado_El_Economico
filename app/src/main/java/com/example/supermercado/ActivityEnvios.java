@@ -1,6 +1,8 @@
 package com.example.supermercado;
+
 import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
+
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
@@ -11,6 +13,7 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
+
 import com.android.volley.AuthFailureError;
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
@@ -18,26 +21,28 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
+import com.example.supermercado.Admin.ActivityDetallePedidos;
 import com.example.supermercado.configuracion.validar_sesion;
+
 import org.json.JSONArray;
 import org.json.JSONObject;
+
 import java.util.Base64;
 import java.util.HashMap;
 import java.util.Map;
-public class ActivityIniciar extends AppCompatActivity{
+
+public class ActivityEnvios extends AppCompatActivity {
     private TextView usuario,nombre,dinero;
     private ImageView imagen;
-    private String rango;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_iniciar);
-        usuario=(TextView) findViewById(R.id.usuario_texto);
+        setContentView(R.layout.activity_envios);
+        usuario=(TextView) findViewById(R.id.usuario_texto50);
         usuario.setText(getIntent().getStringExtra("user"));
-        nombre=(TextView) findViewById(R.id.nombre_texto);
-        imagen=(ImageView) findViewById(R.id.foto_perfil);
-        dinero=(TextView) findViewById(R.id.dinero_texto);
-        rango=getIntent().getStringExtra("rango");
+        nombre=(TextView) findViewById(R.id.nombre_texto50);
+        imagen=(ImageView) findViewById(R.id.foto_perfil50);
+        dinero=(TextView) findViewById(R.id.dinero_texto50);
         informacion();
     }
     public void informacion(){
@@ -82,32 +87,38 @@ public class ActivityIniciar extends AppCompatActivity{
         RequestQueue requestQueue = Volley.newRequestQueue(this);
         requestQueue.add(stringRequest);
     }
-    public void productos(View view){
+    public void productos50(View view){
         Intent intent=new Intent(this,ActivityProductos.class);
         intent.putExtra("user",getIntent().getStringExtra("user"));
         intent.putExtra("rango",getIntent().getStringExtra("rango"));
         startActivity(intent);
     }
-    public void historial_pedidos(View view){
+    public void historial_pedidos50(View view){
         Intent intent=new Intent(this,ActivityHistorialPedido.class);
         intent.putExtra("user",getIntent().getStringExtra("user"));
         intent.putExtra("rango",getIntent().getStringExtra("rango"));
         startActivity(intent);
     }
-    public void ver_carrito(View view){
+    public void ver_carrito50(View view){
         Intent intent=new Intent(this, ActivityVerCarrito.class);
         intent.putExtra("user",getIntent().getStringExtra("user"));
         intent.putExtra("rango",getIntent().getStringExtra("rango"));
         startActivity(intent);
     }
-    public void perfil_usuario(View view){
+    public void perfil_usuario50(View view){
         Intent intent=new Intent(this,ActivityPerfilUsuario.class);
         intent.putExtra("user",getIntent().getStringExtra("user"));
         intent.putExtra("rango",getIntent().getStringExtra("rango"));
         startActivity(intent);
     }
-    public void cerrar(View view){
+    public void cerrar50(View view){
         Intent intent=new Intent(this,MainActivity.class);
+        startActivity(intent);
+    }
+    public void entregar50(View view){
+        Intent intent=new Intent(this, ActivityDetallePedidos.class);
+        intent.putExtra("user",getIntent().getStringExtra("user"));
+        intent.putExtra("rango",getIntent().getStringExtra("rango"));
         startActivity(intent);
     }
     public boolean onKeyDown(int keyCode, KeyEvent event){
