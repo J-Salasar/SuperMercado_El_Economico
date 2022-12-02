@@ -172,19 +172,23 @@ public class ActivityVerCarrito extends AppCompatActivity {
             }
         }
     }
-    public void pagar_compra(View view){
-        if(getIntent().getStringExtra("ubicacion") != null) {
-            if (Float.parseFloat(dinero) >= total) {
-                lat=Double.parseDouble(getIntent().getStringExtra("latitud"));
-                lon=Double.parseDouble(getIntent().getStringExtra("longitud"));
-                cobrar();
+    public void pagar_compra(View view) {
+        if (total > 0) {
+            if (getIntent().getStringExtra("ubicacion") != null) {
+                if (Float.parseFloat(dinero) >= total) {
+                    lat = Double.parseDouble(getIntent().getStringExtra("latitud"));
+                    lon = Double.parseDouble(getIntent().getStringExtra("longitud"));
+                    cobrar();
+                } else {
+                    Toast.makeText(this, "Te falta dinero", Toast.LENGTH_SHORT).show();
+                }
             }
-            else{
-                Toast.makeText(this,"Te falta dinero",Toast.LENGTH_SHORT).show();
+            else {
+                Toast.makeText(this, "Ubicacion por favor", Toast.LENGTH_SHORT).show();
             }
         }
         else{
-            Toast.makeText(this,"Ubicacion por favor",Toast.LENGTH_SHORT).show();
+            Toast.makeText(this,"Agrega algo para comprar",Toast.LENGTH_SHORT).show();
         }
     }
     public void cobrar(){
@@ -238,11 +242,15 @@ public class ActivityVerCarrito extends AppCompatActivity {
         }
     }
     public void permisos_gps3(View view){
-        if(ContextCompat.checkSelfPermission(getApplicationContext(),Manifest.permission.ACCESS_FINE_LOCATION)!=PackageManager.PERMISSION_GRANTED){
-            ActivityCompat.requestPermissions(ActivityVerCarrito.this,new String[]{Manifest.permission.ACCESS_FINE_LOCATION},REQUEST_CODE);
+        if (total > 0) {
+            if (ContextCompat.checkSelfPermission(getApplicationContext(), Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
+                ActivityCompat.requestPermissions(ActivityVerCarrito.this, new String[]{Manifest.permission.ACCESS_FINE_LOCATION}, REQUEST_CODE);
+            } else {
+                ubicacion();
+            }
         }
         else{
-            ubicacion();
+            Toast.makeText(this,"Agrega algo para comprar",Toast.LENGTH_SHORT).show();
         }
     }
     public boolean onKeyDown(int keyCode, KeyEvent event){return false;}
