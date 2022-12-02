@@ -48,14 +48,15 @@ public class ActivityProductos extends AppCompatActivity {
         lista.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                /*Intent modificar=new Intent(view.getContext(),ActivityModificar.class);
+                Intent modificar=new Intent(view.getContext(),ActivityAgregarCarrito.class);
                 modificar.putExtra("id",id.get(i));
                 modificar.putExtra("nombre",nombre.get(i));
-                modificar.putExtra("numero",numero.get(i));
-                modificar.putExtra("latitud",latitud.get(i));
-                modificar.putExtra("longitud",longitud.get(i));
+                modificar.putExtra("precio",precio.get(i));
+                modificar.putExtra("cantidad",cantidad.get(i));
                 modificar.putExtra("foto",foto.get(i));
-                startActivity(modificar);*/
+                modificar.putExtra("user",usuario);
+                modificar.putExtra("rango",rango);
+                startActivity(modificar);
             }
         });
     }

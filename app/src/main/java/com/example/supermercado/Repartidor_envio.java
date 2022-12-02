@@ -103,6 +103,7 @@ public class Repartidor_envio extends AppCompatActivity {
         Intent intent=new Intent(this, ActivityVerCarrito.class);
         intent.putExtra("user",getIntent().getStringExtra("user"));
         intent.putExtra("rango",getIntent().getStringExtra("rango"));
+        intent.putExtra("dinero",dinero.getText().toString());
         startActivity(intent);
     }
     public void perfil_usuario50(View view){

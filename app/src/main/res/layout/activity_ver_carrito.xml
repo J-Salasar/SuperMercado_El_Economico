@@ -7,13 +7,13 @@
     tools:context=".ActivityVerCarrito">
 
 
-
     <LinearLayout
 
+        android:id="@+id/linearLayout4"
         android:layout_width="match_parent"
         android:layout_height="65dp"
-        android:layout_margin="0dp"
 
+        android:layout_margin="0dp"
         android:background="#823E24"
         android:orientation="horizontal"
         android:padding="10dp"
@@ -26,7 +26,7 @@
 
 
         <ImageView
-            android:id="@+id/imgVolver"
+            android:id="@+id/volver3695"
             android:layout_width="44dp"
             android:layout_height="46dp"
             android:layout_marginTop="5dp"
@@ -34,7 +34,7 @@
 
 
             android:gravity="center"
-            android:onClick="onClickBack"
+            android:onClick="volver80"
             tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
 
         <TextView
@@ -51,7 +51,64 @@
 
     </LinearLayout>
 
+    <ListView
+        android:id="@+id/lista2_basedatos"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="75dp"
+        android:layout_marginBottom="100dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
 
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:background="@drawable/radiusbutton"
+        android:backgroundTint="#00BCD4"
+        android:onClick="pagar_compra"
+        android:text="Comprar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.019"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.976" />
+
+    <TextView
+        android:id="@+id/total80"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="10dp"
+        android:text="Total: L. 0"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.98"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.909" />
+
+    <Button
+        android:id="@+id/button5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/radiusbutton"
+        android:backgroundTint="#9C27B0"
+        android:onClick="permisos_gps3"
+        android:text="Ubicacion"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.414"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.976" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
