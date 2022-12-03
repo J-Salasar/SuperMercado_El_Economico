@@ -4,18 +4,17 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#C31919"
     tools:context=".ActivityHistorialPedido">
-
-
-
 
 
     <LinearLayout
 
+        android:id="@+id/linearLayout5"
         android:layout_width="match_parent"
         android:layout_height="65dp"
-        android:layout_margin="0dp"
 
+        android:layout_margin="0dp"
         android:background="#823E24"
         android:orientation="horizontal"
         android:padding="10dp"
@@ -28,7 +27,7 @@
 
 
         <ImageView
-            android:id="@+id/imgVolver"
+            android:id="@+id/volver2022"
             android:layout_width="44dp"
             android:layout_height="46dp"
             android:layout_marginTop="5dp"
@@ -36,7 +35,7 @@
 
 
             android:gravity="center"
-            android:onClick="onClickVolver"
+            android:onClick="atras2022"
             tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck,UsingOnClickInXml" />
 
         <TextView
@@ -52,6 +51,17 @@
 
 
     </LinearLayout>
+
+    <ListView
+        android:id="@+id/lista100"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="75dp"
+        android:background="#00BCD4"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
